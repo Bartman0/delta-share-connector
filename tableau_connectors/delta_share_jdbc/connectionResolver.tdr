@@ -8,8 +8,8 @@
         <required-attributes>
           <attribute-list>
             <attr>connection-profile</attr>
-            <attr>initialSQL</attr>
             <attr>v-catalog</attr>
+            <attr>initialSQL</attr>
           </attribute-list>
         </required-attributes>
       </connection-normalizer>
