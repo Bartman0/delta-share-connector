@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<connector-plugin class='delta_share_jdbc' superclass='jdbc' plugin-version='1.0.0' name='DeltaShare' version='18.1' min-version-tableau='2020.4'>
+  <vendor-information>
+      <company name="Simpsons"/>
+      <support-link url="https://github.com/Bartman0/delta-share-connector"/>
+      <driver-download-link url="https://github.com/Bartman0/delta-share-connector/releases"/>
+  </vendor-information>
+  <connection-customization class="delta_share_jdbc" enabled="true" version="1.0">
+    <vendor name="vendor"/>
+    <driver name="driver"/>
+    <customizations>
+      <customization name="CAP_SELECT_INTO" value="no"/>
+      <customization name="CAP_SELECT_TOP_INTO" value="no"/>
+      <customization name="CAP_CREATE_TEMP_TABLES" value="yes"/>
+      <customization name="CAP_QUERY_BOOLEXPR_TO_INTEXPR" value="no"/>
+      <customization name="CAP_QUERY_GROUP_BY_BOOL" value="yes"/>
+      <customization name="CAP_QUERY_GROUP_BY_DEGREE" value="yes"/>
+      <customization name="CAP_QUERY_SORT_BY" value="yes"/>
+      <customization name="CAP_QUERY_SUBQUERIES" value="yes"/>
+      <customization name="CAP_QUERY_TOP_N" value="yes"/>
+      <customization name="CAP_QUERY_TOP_SAMPLE" value="yes"/>
+      <customization name="CAP_QUERY_TOP_SAMPLE_PERCENT" value="yes"/>
+      <customization name="CAP_QUERY_WHERE_FALSE_METADATA" value="yes"/>
+      <customization name="CAP_QUERY_SUBQUERIES_WITH_TOP" value="yes"/>
+      <customization name="CAP_SUPPORTS_SPLIT_FROM_LEFT" value="yes"/>
+      <customization name="CAP_SUPPORTS_SPLIT_FROM_RIGHT" value="yes"/>
+      <customization name="CAP_SUPPORTS_UNION" value="yes"/>
+      <customization name="CAP_QUERY_ALLOW_PARTIAL_AGGREGATION" value="no"/>
+    </customizations>
+  </connection-customization>
+  <connection-fields file='connectionFields.xml'/>
+  <connection-metadata file='connectionMetadata.xml'/>
+  <connection-resolver file="connectionResolver.tdr"/>
+  <dialect file='dialect.tdd'/>
+</connector-plugin>
