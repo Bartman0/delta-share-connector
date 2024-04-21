@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
-
 <!-- See notes below for definitions that require 2020.3 or newer -->
 <dialect name='DeltaShare'
          class='delta_share_jdbc'

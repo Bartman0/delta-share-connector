@@ -1,1 +1,1 @@
-A connector for Delta Share.
+A Tableau connector for Delta Share.

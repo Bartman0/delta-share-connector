@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
-
 <connection-fields>
   <field name="connection-profile" label="Delta Share connection profile" category="general" value-type="file">
   </field>
