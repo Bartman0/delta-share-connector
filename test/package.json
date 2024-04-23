@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "delta-sharing": "^0.0.2",
+    "duckdb": "^0.10.1"
+  }
+}
