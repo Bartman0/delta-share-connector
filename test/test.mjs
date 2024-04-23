@@ -4,7 +4,7 @@ import duckdb from 'duckdb';
 const db = new duckdb.Database(':memory:');
 var sql_tables = [];
 
-import { SharingClient, DeltaSharingProfile, Share, Schema, Table, DeltaSharingReader, DataSharingRestClient } from 'delta-sharing';
+import { DeltaSharingProfile, SharingClient, DataSharingRestClient } from 'delta-sharing';
 
 const sharingProfile = DeltaSharingProfile.readFromFile('/Users/richardkooijman/Downloads/config.share');
 const client = new SharingClient(sharingProfile);
