@@ -1,7 +1,7 @@
-import os from 'os';
-import path from 'path';
-import duckdb from 'duckdb';
-import { DeltaSharingProfile, SharingClient, DataSharingRestClient } from 'delta-sharing';
+const os = require('os');
+const path = require('path');
+const duckdb = require('duckdb');
+const ds = require('delta-sharing');
 
 function dsbuilder(attr) {
     const connectionProfile = attr[connectionHelper.attributeConnectionProfile];
@@ -17,9 +17,9 @@ function dsbuilder(attr) {
 function ingestDeltaShare(url, connectionProfile) {
     const db = new duckdb.Database(url);
 
-    const sharingProfile = DeltaSharingProfile.readFromFile('/Users/richardkooijman/Downloads/config.share');
-    const client = new SharingClient(sharingProfile);
-    const restClient = new DataSharingRestClient(sharingProfile);
+    const sharingProfile = ds.DeltaSharingProfile.readFromFile(connectionProfile);
+    const client = new ds.SharingClient(sharingProfile);
+    const restClient = new ds.DataSharingRestClient(sharingProfile);
     
     var sql_tables = [];
     var read_parquet_urls = [];

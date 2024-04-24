@@ -9,9 +9,8 @@
           <attribute-list>
             <attr>connectionprofile</attr>
             <attr>server</attr>
-            <attr>port</attr>  
             <attr>username</attr>
-            <attr>password</attr>  
+            <attr>password</attr>
             <!-- <attr>initialSQL</attr> -->
           </attribute-list>
         </required-attributes>
